@@ -54,6 +54,9 @@ main{
 .card{
     position: relative;
     padding: 0 32px;
+    animation-name: topdown;
+    animation-timing-function: ease;
+    animation-duration: 3s;
 }
 
 .card img{
@@ -62,6 +65,14 @@ main{
 }
 
 h2 span{
+    animation-name: downtop;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+
+    
+
+    opacity: 0;
     display: inline-block;
     background-color: white;
     height: 3.4rem;
@@ -86,6 +97,33 @@ section{
     left: -15rem;
     gap: 4rem;
 
+}
+
+@keyframes downtop {
+    0%{
+        opacity: 0;
+        transform: translateY(-45px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+@keyframes topdown {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
 }
 
 
